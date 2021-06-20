@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>394</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>351</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Фильтры:</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Фильтр даты</string>
+     </property>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>15</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2021</year>
+        <month>12</month>
+        <day>12</day>
+       </datetime>
+      </property>
+      <property name="minimumDate">
+       <date>
+        <year>2013</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>17</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>От:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>134</x>
+        <y>17</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>До:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>152</x>
+        <y>15</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maximumDateTime">
+       <datetime>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+        <year>2021</year>
+        <month>12</month>
+        <day>12</day>
+       </datetime>
+      </property>
+      <property name="minimumDate">
+       <date>
+        <year>2013</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>74</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Статус уязвимости:</string>
+     </property>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>19</y>
+        <width>151</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Без фильтра</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Уязвимость устраненна</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Уязвимость актуальна</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>ОС:</string>
+     </property>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>18</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Windows</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Linux</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MAC OS</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>18</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Без фильтра</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Windows</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Linux</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MAC OS</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_4">
+      <property name="geometry">
+       <rect>
+        <x>196</x>
+        <y>18</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Без фильтра</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Windows</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Linux</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MAC OS</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>331</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Ошибки:</string>
+     </property>
+     <widget class="QListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>141</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::DragDrop</enum>
+      </property>
+      <property name="defaultDropAction">
+       <enum>Qt::MoveAction</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>CWE-399</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-426</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-415</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-190</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-125</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-704</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-787</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-22</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-254</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-189</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-79</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-119</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-264</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-200</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-416</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-17</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-284</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Без фильтра</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>162</x>
+        <y>24</y>
+        <width>161</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Выбранные:</string>
+      </property>
+      <widget class="QListWidget" name="listWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>141</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragDrop</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::MoveAction</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Наличие эксплойта:</string>
+     </property>
+     <widget class="QComboBox" name="comboBox_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Без фильтра</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Существует</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Не существует</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>536</y>
+      <width>351</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Кнопки:</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>331</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="show_diagramm">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 255, 127);</string>
+        </property>
+        <property name="text">
+         <string>Показать диаграмму</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="push_docx_2">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 255, 127);</string>
+        </property>
+        <property name="text">
+         <string>Сделать выгрузку в docx</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
