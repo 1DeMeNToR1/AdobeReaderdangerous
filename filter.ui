@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>394</width>
-    <height>636</height>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Фильтр-мастер</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 0);
@@ -24,7 +24,7 @@ color: rgb(255, 255, 255);</string>
       <x>20</x>
       <y>10</y>
       <width>351</width>
-      <height>521</height>
+      <height>501</height>
      </rect>
     </property>
     <property name="title">
@@ -42,7 +42,7 @@ color: rgb(255, 255, 255);</string>
      <property name="title">
       <string>Фильтр даты</string>
      </property>
-     <widget class="QDateEdit" name="dateEdit">
+     <widget class="QDateEdit" name="date_start">
       <property name="geometry">
        <rect>
         <x>22</x>
@@ -50,6 +50,16 @@ color: rgb(255, 255, 255);</string>
         <width>110</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1999</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
       </property>
       <property name="maximumDateTime">
        <datetime>
@@ -61,9 +71,19 @@ color: rgb(255, 255, 255);</string>
         <day>12</day>
        </datetime>
       </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>1999</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
       <property name="minimumDate">
        <date>
-        <year>2013</year>
+        <year>1999</year>
         <month>1</month>
         <day>1</day>
        </date>
@@ -95,7 +115,7 @@ color: rgb(255, 255, 255);</string>
        <string>До:</string>
       </property>
      </widget>
-     <widget class="QDateEdit" name="dateEdit_2">
+     <widget class="QDateEdit" name="date_finish">
       <property name="geometry">
        <rect>
         <x>152</x>
@@ -103,6 +123,16 @@ color: rgb(255, 255, 255);</string>
         <width>110</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>2021</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
       </property>
       <property name="maximumDateTime">
        <datetime>
@@ -135,7 +165,7 @@ color: rgb(255, 255, 255);</string>
      <property name="title">
       <string>Статус уязвимости:</string>
      </property>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="status_yazvim">
       <property name="geometry">
        <rect>
         <x>3</x>
@@ -176,7 +206,7 @@ color: rgb(255, 255, 255);</string>
      <property name="title">
       <string>ОС:</string>
      </property>
-     <widget class="QComboBox" name="comboBox_2">
+     <widget class="QComboBox" name="OS_1">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -201,7 +231,7 @@ color: rgb(255, 255, 255);</string>
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="comboBox_3">
+     <widget class="QComboBox" name="OS_2">
       <property name="geometry">
        <rect>
         <x>105</x>
@@ -231,7 +261,7 @@ color: rgb(255, 255, 255);</string>
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="comboBox_4">
+     <widget class="QComboBox" name="OS_3">
       <property name="geometry">
        <rect>
         <x>196</x>
@@ -297,27 +327,7 @@ color: rgb(255, 255, 255);</string>
       </property>
       <item>
        <property name="text">
-        <string>CWE-399</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-426</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-415</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-20</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-190</string>
+        <string>CWE-119</string>
        </property>
       </item>
       <item>
@@ -327,12 +337,27 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item>
        <property name="text">
-        <string>CWE-704</string>
+        <string>CWE-17</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>CWE-787</string>
+        <string>CWE-189</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-190</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-20</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-200</string>
        </property>
       </item>
       <item>
@@ -347,27 +372,22 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item>
        <property name="text">
-        <string>CWE-189</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-79</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-119</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>CWE-264</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>CWE-200</string>
+        <string>CWE-284</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-399</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-415</string>
        </property>
       </item>
       <item>
@@ -377,16 +397,26 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item>
        <property name="text">
-        <string>CWE-17</string>
+        <string>CWE-426</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>CWE-284</string>
+        <string>CWE-704</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-787</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CWE-79</string>
        </property>
       </item>
      </widget>
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="without_errors">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -411,7 +441,7 @@ color: rgb(255, 255, 255);</string>
       <property name="title">
        <string>Выбранные:</string>
       </property>
-      <widget class="QListWidget" name="listWidget_2">
+      <widget class="QListWidget" name="chosen_errors">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -444,7 +474,7 @@ color: rgb(255, 255, 255);</string>
      <property name="title">
       <string>Наличие эксплойта:</string>
      </property>
-     <widget class="QComboBox" name="comboBox_5">
+     <widget class="QComboBox" name="explouit">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -474,8 +504,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QGroupBox" name="groupBox_8">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>536</y>
+      <x>20</x>
+      <y>520</y>
       <width>351</width>
       <height>91</height>
      </rect>
@@ -505,7 +535,7 @@ background-color: rgb(85, 255, 127);</string>
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QPushButton" name="push_docx_2">
+       <widget class="QPushButton" name="upload_docx">
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 0, 0);
 background-color: rgb(85, 255, 127);</string>
