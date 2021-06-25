@@ -88,6 +88,9 @@ color: rgb(255, 255, 255);</string>
         <day>1</day>
        </date>
       </property>
+      <property name="displayFormat">
+       <string>yyyy</string>
+      </property>
      </widget>
      <widget class="QLabel" name="label">
       <property name="geometry">
@@ -150,6 +153,9 @@ color: rgb(255, 255, 255);</string>
         <month>1</month>
         <day>1</day>
        </date>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy</string>
       </property>
      </widget>
     </widget>

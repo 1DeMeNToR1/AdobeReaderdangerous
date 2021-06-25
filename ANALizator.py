@@ -6,6 +6,7 @@ import pandas as pd
 import time
 import requests
 from threading import Thread
+from docx import Document
 
 def log_uncaught_exceptions(ex_cls, ex, tb): #error catcher
     text = '{}: {}:\n'.format(ex_cls.__name__, ex)
@@ -52,6 +53,22 @@ class win_filter(QMainWindow, filter):
 
     def upload_to_docx(self):
         self.collect_from_filters()
+        for i in diction:
+            pr_month = str(diction[i][3].split(".")[1])
+            pr_year = str(diction[i][3].split(".")[2])
+
+            if int(year_f) >= int(pr_year) >= int(year_s):
+                print(diction[i][3])
+
+
+        """
+        #name[0], date[3], status[7], oc[1], exploit[6], errors[8]   ('Adobe Reader, Adobe Reader Document Cloud, Adobe Acrobat Document Cloud, Adobe Acrobat', 'Mac OS (X), Windows (.)', 'Уязвимость кода', '11.05.2016', 'Критический уровень опасности (базовая оценка CVSS 2.0 составляет 10)', 'Подтверждена производителем', 'Данные уточняются', 'Уязвимость устранена', 'CWE-416')
+        doc = Document()
+        doc.add_paragraph("Тест")
+        #for row in ra
+        doc.table._Cell.add_paragraph("sosi")
+        doc.save('test.docx')
+        """
         ###################################### Доделать выгрузку по фильтрам
 
     def show_diagr(self):
@@ -101,7 +118,6 @@ class main_ui(QMainWindow, Form):
         for name in top_players['Unnamed: 4'].tolist():
             counter += 1
             if "Adobe Reader" in str(name):
-                print(counter)
                 lines.append(counter)
                 diction[counter] = str(chose_priloj)
         for i in lines:
@@ -214,7 +230,6 @@ class main_ui(QMainWindow, Form):
             codes_to_ystr_yaz[diction[i][7].split("(")[0]][diction[i][4].split("(")[0]] += 1
             codes_to_status_yaz[diction[i][5].split(" ")[0]][diction[i][4].split("(")[0]] += 1
             codes_to_class_yazvim[str(diction[i][2])] += 1
-            print(str(diction[i]))
             code_to_date_ystr[str(diction[i][3].split(".")[2])][str(diction[i][7].split("(")[0])] += 1
             code_to_date_obn[str(diction[i][3].split(".")[2])] += 1
 
