@@ -190,7 +190,7 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item>
        <property name="text">
-        <string>Уязвимость устраненна</string>
+        <string>Уязвимость устранена</string>
        </property>
       </item>
       <item>
@@ -263,7 +263,7 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item>
        <property name="text">
-        <string>MAC OS</string>
+        <string>Mac OS</string>
        </property>
       </item>
      </widget>
@@ -293,7 +293,7 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item>
        <property name="text">
-        <string>MAC OS</string>
+        <string>Mac OS</string>
        </property>
       </item>
      </widget>
@@ -331,96 +331,6 @@ color: rgb(255, 255, 255);</string>
       <property name="sortingEnabled">
        <bool>true</bool>
       </property>
-      <item>
-       <property name="text">
-        <string>CWE-119</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-125</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-17</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-189</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-190</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-20</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-200</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-22</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-254</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-264</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-284</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-399</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-415</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-416</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-426</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-704</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-787</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CWE-79</string>
-       </property>
-      </item>
      </widget>
      <widget class="QCheckBox" name="without_errors">
       <property name="geometry">
@@ -433,6 +343,9 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Без фильтра</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox_6">
