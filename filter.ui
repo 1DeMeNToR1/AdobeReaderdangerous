@@ -449,7 +449,7 @@ color: rgb(255, 255, 255);</string>
 background-color: rgb(85, 255, 127);</string>
         </property>
         <property name="text">
-         <string>Показать диаграмму</string>
+         <string>Сохранить диаграмму</string>
         </property>
        </widget>
       </item>
