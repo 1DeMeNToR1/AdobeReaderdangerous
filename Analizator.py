@@ -59,9 +59,9 @@ class win_filter(QMainWindow, filter):
         collect = {}
         self.collect_from_filters()
         for i in diction:
-            checker = {"date": False, "status": {"Уязвимость устранена": False, "Уязвимость актуальна": False},
+            checker = {"date": False, "status": False,
                        "OS__1": False, "OS__2": False, "OS__3": False,
-                       "exploit": {"Существует": False, "Информация отсутствует": False}, "errors": False}
+                       "exploit": False, "errors": False}
             pr_year = str(diction[i][3].split(".")[2])
 
             if OS__2 == "Без фильтра":
@@ -73,12 +73,15 @@ class win_filter(QMainWindow, filter):
             def check_date():
                 if year_s <= pr_year <= year_f:
                     checker["date"] = True
+                else:
+                    pass
 
             def check_status():
-                if 'Уязвимость устранена' == diction[i][7]:
-                    checker["status"]["Уязвимость устранена"] = True
-                else:
-                    checker["status"]["Уязвимость актуальна"] = True
+                stat = {"Уязвимость устранена":"Уязвимость устранена", "Уязвимость актуальна":"Информация об устранении отсутствует"}
+                print(stat[status])
+                print(diction[i][7])
+                if stat[status] == diction[i][7]:
+                    checker["status"] = True
 
             def check_OS():
                 if str(diction[i][1]) != "nan":
@@ -90,14 +93,17 @@ class win_filter(QMainWindow, filter):
                         checker["OS__3"] = True
 
             def check_exploit():
-                if "Существует" == diction[i][6] or "Существует в открытом доступе" == diction[i][6]:
-                    checker["exploit"]["Существует"] = True
-                else:
-                    checker["exploit"]["Информация отсутствует"] = True
+                expl = {"Существует":"Существует", "Не существует":"Данные уточняются", "Существует":"Существует в открытом доступе"}
+                print(expl[exploit])
+                print(diction[i][6])
+                if expl[exploit] == diction[i][6]:
+                    checker["exploit"] = True
 
             def check_errors():
                 if diction[i][8] in chose_err:
                     checker["errors"] = True
+                else:
+                    checker["errors"] = False
 
             check_date()
 
@@ -121,9 +127,23 @@ class win_filter(QMainWindow, filter):
             pass_flag = False
             for g in checker:
                 if checker[g] == False:
+                        pass_flag = True
+                        break
+
+            try:
+                if diction[i]["status"] != status:
                     pass_flag = True
-                    break
+            except Exception:
+               None
+
+            try:
+                if diction[i]["exploit"] != status:
+                    pass_flag = True
+            except Exception:
+                None
+
             if pass_flag == False:
+                print("True")
                 collect[i] = diction[i]
 
 
@@ -139,12 +159,10 @@ class win_filter(QMainWindow, filter):
             table.cell(0, 3).text = 'Наличие\nЭксплойта'
             table.cell(0, 4).text = 'Ошибки'
             table.cell(0, 5).text = 'Ур.\n опасности'
-
             codes_to_dang = {"Критический уровень опасности ":"K", "Высокий уровень опасности ":"H", "Средний уровень опасности ":"M", "Низкий уровень опасности ":"L"}
             counter = 1
             for i in collect:
                 dang =codes_to_dang[collect[i][4].split("(")[0]]
-
                 table.cell(counter, 0).text = collect[i][3]
                 table.cell(counter, 1).text = collect[i][7]
                 table.cell(counter, 2).text = collect[i][1]
@@ -165,10 +183,13 @@ class win_filter(QMainWindow, filter):
 
     def show_diagr(self):
         self.filtering()
-        index = [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
+        index = []
         values_years = []
-        for i in code_to_date_obn:
-            values_years.append(code_to_date_obn[i])
+        for i in range(int(year_s), int(year_f)+1):
+            index.append(i)
+            values_years.append(code_to_date_obn[str(i)])
+        print(index)
+        print(values_years)
         plt.bar(index, values_years)
         plt.savefig('graph.png', bbox_inches='tight', dpi= 150)
         plt.show()

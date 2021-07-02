@@ -521,7 +521,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>3</x>
        <y>13</y>
-       <width>206</width>
+       <width>201</width>
        <height>123</height>
       </rect>
      </property>
@@ -544,7 +544,7 @@ background-color: rgb(85, 255, 127);</string>
 background-color: rgb(85, 255, 127);</string>
         </property>
         <property name="text">
-         <string>Построить диаграмму по фильтрам,
+         <string>Сохранить диаграмму,
 сделать выгрузку в docx по фильтрам</string>
         </property>
        </widget>
